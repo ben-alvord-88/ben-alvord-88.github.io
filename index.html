@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ben Alvord — Digital Marketing &amp; Demand Generation</title>
+<meta name="description" content="Ben Alvord — digital marketing and demand generation executive for B2B SaaS and cybersecurity companies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #1B2027;
+    --bg-panel: #20262E;
+    --text: #EDEBE4;
+    --text-muted: #9AA1AC;
+    --accent: #5CB3A0;
+    --rule: #333B45;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --max: 720px;
+  }
+
+  *{ box-sizing: border-box; }
+
+  html{ scroll-behavior: smooth; }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior: auto; }
+    *{ animation: none !important; transition: none !important; }
+  }
+
+  body{
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a{ color: var(--accent); text-decoration-color: rgba(92,179,160,0.4); text-underline-offset: 3px; }
+  a:hover{ text-decoration-color: var(--accent); }
+
+  :focus-visible{
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  .wrap{
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .wrap--wide{
+    max-width: 860px;
+  }
+
+  header.site{
+    padding: 28px 0 0;
+  }
+
+  header.site nav{
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+  }
+
+  header.site nav .mark{
+    font-family: var(--serif);
+    font-size: 19px;
+    color: var(--text);
+    letter-spacing: 0.01em;
+  }
+
+  header.site nav .links a{
+    color: var(--text-muted);
+    margin-left: 22px;
+    text-decoration: none;
+  }
+  header.site nav .links a:hover{ color: var(--text); }
+
+  .hero{
+    padding: 64px 0 8px;
+  }
+
+  .hero .wrap{ max-width: 860px; }
+
+  h1{
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(2.4rem, 5vw, 3.4rem);
+    line-height: 1.08;
+    margin: 0 0 20px;
+    letter-spacing: -0.01em;
+  }
+
+  .lede{
+    font-size: 19px;
+    color: var(--text);
+    max-width: 640px;
+    margin: 0 0 8px;
+  }
+
+  .role{
+    color: var(--text-muted);
+    font-size: 16px;
+    margin: 0 0 44px;
+  }
+
+  .chart-label{
+    color: var(--text-muted);
+    font-size: 14px;
+    margin: 0 0 6px;
+  }
+
+  .chart-wrap{
+    margin: 0 0 8px;
+  }
+
+  .chart-wrap svg{ width: 100%; height: auto; display: block; }
+
+  .chart-notes{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin: 10px 0 56px;
+    font-size: 12.5px;
+    color: var(--text-muted);
+  }
+  .chart-notes span{ display:block; }
+  .chart-notes strong{ display:block; color: var(--text); font-weight: 500; font-size: 13px; margin-bottom: 2px; }
+
+  @media (max-width: 640px){
+    .chart-notes{ grid-template-columns: repeat(2, 1fr); }
+  }
+
+  section{
+    padding: 52px 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  section .wrap{ max-width: 720px; }
+
+  h2{
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 0 0 22px;
+  }
+
+  .about p{ margin: 0 0 16px; max-width: 640px; }
+  .about p:last-child{ margin-bottom: 0; }
+
+  .ai-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    max-width: 720px;
+  }
+  @media (max-width: 640px){ .ai-grid{ grid-template-columns: 1fr; } }
+
+  .ai-grid h3{
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--accent);
+    margin: 0 0 10px;
+  }
+  .ai-grid ul{ margin: 0; padding: 0; list-style: none; }
+  .ai-grid li{
+    font-size: 14.5px;
+    color: var(--text-muted);
+    padding: 7px 0;
+    border-top: 1px solid var(--rule);
+  }
+  .ai-grid li:first-child{ border-top: none; padding-top: 0; }
+
+  .role-entry{
+    padding: 26px 0;
+    border-top: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 20px;
+  }
+  .role-entry:first-child{ border-top: none; padding-top: 0; }
+  @media (max-width: 560px){
+    .role-entry{ grid-template-columns: 1fr; gap: 6px; }
+  }
+
+  .role-entry .when{
+    color: var(--text-muted);
+    font-size: 14px;
+    padding-top: 3px;
+  }
+
+  .role-entry .company{
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 0 2px;
+  }
+  .role-entry .title{
+    color: var(--text-muted);
+    font-size: 14.5px;
+    margin: 0 0 12px;
+  }
+  .role-entry ul{ margin: 0; padding: 0 0 0 18px; }
+  .role-entry li{ font-size: 15px; margin: 0 0 7px; }
+  .role-entry li:last-child{ margin-bottom: 0; }
+
+  .prior{
+    padding-top: 20px;
+    margin-top: 6px;
+    border-top: 1px solid var(--rule);
+    color: var(--text-muted);
+    font-size: 14.5px;
+  }
+
+  .expertise-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  @media (max-width: 640px){ .expertise-grid{ grid-template-columns: 1fr; } }
+  .expertise-grid h3{
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin: 0 0 10px;
+  }
+  .expertise-grid p{
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .footnote{
+    color: var(--text-muted);
+    font-size: 14.5px;
+    margin-top: 30px;
+  }
+
+  footer.site{
+    padding: 56px 0 70px;
+  }
+  footer.site h2{ margin-bottom: 14px; }
+  footer.site p{ color: var(--text-muted); max-width: 520px; margin: 0 0 22px; }
+  .contact-line{ font-size: 17px; }
+  .contact-line a{ margin-right: 22px; }
+  .copyright{
+    margin-top: 44px;
+    color: var(--text-muted);
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <nav>
+    <span class="mark">Ben Alvord</span>
+    <span class="links">
+      <a href="#experience">Experience</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#contact">Contact</a>
+    </span>
+  </nav>
+</header>
+
+<section class="hero" style="border-top:none;">
+  <div class="wrap">
+    <h1>Digital marketing built<br>around pipeline, not vanity metrics.</h1>
+    <p class="lede">I lead digital marketing and demand generation for B2B SaaS and cybersecurity companies — turning revenue targets into repeatable pipeline, and applying AI across the workflow to do it faster.</p>
+    <p class="role">20+ years. Most recently Director of Digital Marketing at Akamai.</p>
+
+    <p class="chart-label">Revenue influenced by my marketing, by company</p>
+    <div class="chart-wrap">
+      <svg viewBox="0 0 860 220" role="img" aria-label="Line chart showing revenue growth across four companies Ben led marketing for, rising from just under $1 million to over $500 million in acquisition value.">
+        <polyline points="20,190 220,150 220,150 420,120 420,120 620,70 620,70 820,30"
+          fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+        <circle cx="20" cy="190" r="4.5" fill="var(--accent)"/>
+        <circle cx="220" cy="150" r="4.5" fill="var(--accent)"/>
+        <circle cx="420" cy="120" r="4.5" fill="var(--accent)"/>
+        <circle cx="620" cy="70" r="4.5" fill="var(--accent)"/>
+        <circle cx="820" cy="30" r="4.5" fill="var(--accent)"/>
+      </svg>
+    </div>
+    <div class="chart-notes">
+      <span><strong>2012</strong>Mendix, ~$1M ARR — 3rd marketing hire</span>
+      <span><strong>2021</strong>Mendix acquired by Siemens, $730M</span>
+      <span><strong>2022</strong>Noname Security, $17M ARR</span>
+      <span><strong>2024</strong>Noname acquired by Akamai, ~$500M</span>
+      <span><strong>2026</strong>Akamai, 186% of revenue target</span>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <p>I've spent the last two decades running digital marketing and demand generation for B2B SaaS and cybersecurity companies, from a pre-revenue startup to a public company. My focus is building strategies that translate into pipeline — using data, market intelligence, and increasingly, generative and agentic AI, across the entire demand gen workflow.</p>
+    <p>I've led teams as large as seven people and budgets as large as $12M, and I care as much about developing the people on my team as I do about hitting the number.</p>
+  </div>
+</section>
+
+<section class="ai">
+  <div class="wrap">
+    <h2>AI in marketing</h2>
+    <div class="ai-grid">
+      <div>
+        <h3>Ideation</h3>
+        <ul>
+          <li>Generative creative concepting</li>
+          <li>Competitive differentiation</li>
+          <li>A/B test hypothesis generation</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Efficiency</h3>
+        <ul>
+          <li>Autonomous paid media agents</li>
+          <li>Shared Claude skills across the team</li>
+          <li>Derivative content production</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Analysis</h3>
+        <ul>
+          <li>Full-funnel attribution</li>
+          <li>Aggregated data reporting</li>
+          <li>Exploratory data analysis</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>Experience</h2>
+
+    <div class="role-entry">
+      <div class="when">2024–2026</div>
+      <div>
+        <p class="company">Akamai</p>
+        <p class="title">Director of Digital Marketing · Cambridge, MA (Remote)</p>
+        <ul>
+          <li>Led demand gen for API Security post-acquisition, hitting 186% of 2024 target — $11.5M in new ARR.</li>
+          <li>Shifted budget toward paid social and third-party webinars, cutting cost per MQL by more than 50%.</li>
+          <li>Led a cross-functional revamp of the security portfolio's nurture strategy: 5 new email streams, each in 7 languages.</li>
+          <li>Standardized contact-level audience targeting for paid media, cutting cost-per-lead on LinkedIn by more than 70%.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="role-entry">
+      <div class="when">2022–2024</div>
+      <div>
+        <p class="company">Noname Security</p>
+        <p class="title">Senior Director of Demand Generation · acquired by Akamai for ~$500M</p>
+        <ul>
+          <li>Grew ARR from $17M to $40M in a year and a half, leading a team of four.</li>
+          <li>Shifted the company from field-marketing-led to digital-first, and cut cost per MQL from $2,500+ to $1,000.</li>
+          <li>Partnered with sales to rebuild the ideal customer profile, raising MQL-to-opportunity conversion.</li>
+          <li>Drove adoption of Writer AI, cutting content creation time by 90%.</li>
+          <li>Led the corporate website redesign and re-platform, on time, in three months.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="role-entry">
+      <div class="when">2021–2022</div>
+      <div>
+        <p class="company">SharpSpring</p>
+        <p class="title">Director of Digital Marketing &amp; Demand Generation · acquired by Constant Contact</p>
+        <ul>
+          <li>Rebuilt every paid media account against industry benchmarks on a $12M annual budget.</li>
+          <li>Cut cost per lead from $600 to $250 through ABM, paid social, and paid search.</li>
+          <li>Led new creative and video production, raising inbound demo requests 57% quarter over quarter.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="role-entry">
+      <div class="when">2012–2021</div>
+      <div>
+        <p class="company">Mendix</p>
+        <p class="title">Senior Manager → Team Lead → Digital Marketing Manager · acquired by Siemens for $730M</p>
+        <ul>
+          <li>Joined as the company's 3rd marketing hire, just shy of $1M ARR; left leading digital marketing at $100M+ ARR.</li>
+          <li>Built paid search and paid social into 30% of total sales pipeline, sourcing multiple six-figure deals.</li>
+          <li>Grew organic traffic from 18% to 43% of total site traffic, with sustained 50%+ YoY organic growth.</li>
+          <li>Took the company's technology category keyword, "low code," to the #1 ranking.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="prior">
+      1999–2012 — Senior Digital Manager at Small Army; Web Development &amp; Organic Search Manager at Pixelmedia.
+    </div>
+  </div>
+</section>
+
+<section id="expertise">
+  <div class="wrap">
+    <h2>Expertise</h2>
+    <div class="expertise-grid">
+      <div>
+        <h3>Strategy &amp; leadership</h3>
+        <p>Marketing AI strategy, demand gen strategy, ABM, talent management, stakeholder alignment, vendor management, team building</p>
+      </div>
+      <div>
+        <h3>Channels &amp; execution</h3>
+        <p>SEO/AEO, paid search, paid social, email nurture, webinars, website strategy, web analytics, intent data</p>
+      </div>
+      <div>
+        <h3>Platforms</h3>
+        <p>Claude, HubSpot, Marketo, Salesforce, 6sense, Google Ads, LinkedIn Ads, Writer AI, Priority Engine</p>
+      </div>
+    </div>
+    <p class="footnote">BFA in English, University of New Hampshire. Volunteer, Wonder Dog Rescue.</p>
+  </div>
+</section>
+
+<footer class="site" id="contact">
+  <div class="wrap">
+    <h2>Get in touch</h2>
+    <p>I'm currently exploring director and head-of-growth roles across B2B SaaS, cybersecurity, and AI companies.</p>
+    <p class="contact-line">
+      <a href="mailto:ben.alvord@gmail.com">ben.alvord@gmail.com</a>
+      <a href="https://www.linkedin.com/in/benalvord" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
+    <p class="copyright">© 2026 Ben Alvord</p>
+  </div>
+</footer>
+
+</body>
+</html>
